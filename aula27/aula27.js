@@ -37,5 +37,7 @@ for(let c of itr){
     console.log(c)
 }
 
-//Funções geradoras são mais autônomas ao serem chamadas ou retornar valores
+//Funções geradoras são mais autônomas ao serem chamadas ou retornar valores, podendo serem pausadas e retomadas de maneira flexível e assíncrona
+//Yield pausa a execução da função mas não sai do código
 //Elas possuem iteradores para execução de múltiplas tarefas
+//Em casos específicos é necessário iniciar o iterador
