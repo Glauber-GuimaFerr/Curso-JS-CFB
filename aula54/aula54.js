@@ -33,4 +33,5 @@ mapa.forEach((el) => {
 //get() retorna o valor de acordo com a chave
 //has() verifica se a chave existe
 //size é uma propriedade que retorna o tamanho da coleção MAP
-//delete() remove o elemento da coleção por chave  
+//delete() remove o elemento da coleção por chave
+//ForEach() é um método de listagem que permite executar uma função para cada elemento de uma coleção  
