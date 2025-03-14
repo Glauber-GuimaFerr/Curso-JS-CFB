@@ -12,6 +12,6 @@ console.log(nome('Bruno'))
 console.log(add(10))
 
 //Arrow function é um tipo de função anônima com declaração simplificada
-//Os parênteses só são utilizados caso haja mais de um parâmetro 
+//Os parênteses só são utilizados caso haja um ou mais parâmetros 
 //As chaves podem ser substituídas por operações sem retorno
 //Utilize chaves para blocos de código

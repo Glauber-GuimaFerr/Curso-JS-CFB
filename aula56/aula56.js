@@ -16,7 +16,7 @@ const frase = `Este é o</br>\n curso de ${curso} do</br>\n canal ${canal}`
 console.log(frase)
 caixa.innerHTML = ul
 
-//Template Strings facilita o uso das concatenações, permitindo adicionar variáveis dentro de um teste
+//Template Strings facilitam o uso das concatenações, permitindo adicionar variáveis dentro de um texto
 //O texto é delimitado por crase e as variáveis são declaradas no template ${}
 //As quebras de linha do HTML são feitas pela tag </br>
 //As quebras de linha do console são feitas pelo template \n
