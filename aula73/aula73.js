@@ -2,11 +2,11 @@ const teclasNum = [...document.querySelectorAll('.num')]
 const teclasOp = [...document.querySelectorAll('.op')]
 const teclaRes = document.querySelector('.res')
 const display = document.querySelector('.display')
-const power = document.getElementById('ton')
+const copy = document.getElementById('tcpy')
 const limpar = document.getElementById('tlimpar')
 const teclaIgual = document.getElementById('tigual')
+const teste = document.getElementById('teste')
 
-let pw = true
 let sinal= false
 let decimal = false 
  
@@ -62,17 +62,11 @@ limpar.addEventListener('click', (evt) => {
     display.innerHTML = '0' 
 })
 
-power.addEventListener('click', (evt) => {
-    sinal = false
-    decimal = false
-    display.innerHTML = '0'
-    if(pw){
-        pw = false
-        display.style.color = "#88aa88"
-    }else{
-        pw = true
-        display.style.color = "black" 
-    } 
+copy.addEventListener('click', (evt) => {
+    teste.select()
+    teste.setSelectionRange(0, 99999) //Mobile
+    navigator.clipboard.writeText(teste.value)
 })
 
-//eval() é uma função interna que realiza operações matemáticas de acordo com interpretações de Strings
+//navigator.clipboard.writeText() são propriedades internas do JavaScript que permitem copiar um conteúdo para a área de transferência 
+//select() marca o conteúdo selecionado
