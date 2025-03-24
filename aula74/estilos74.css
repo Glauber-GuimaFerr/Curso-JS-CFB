@@ -1,0 +1,90 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.dflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc{
+    flex-direction: row;
+    position: absolute;
+    left: -250px;
+    transition: all 0.2s;
+}
+
+.calc_exibir{
+    left: 0px !important;
+    transition: all 0.2s;
+}
+
+.calc_principal{
+    flex-direction: column;
+    background-color: #eee;
+    border: 3px solid #bbb;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Título*/
+
+.div_nome{
+    width: 220px;
+}
+
+/*Display*/
+
+.div_display{
+    width: 220px;
+}
+
+.display{
+    width: 220px;
+    background-color: #8a8;    
+    text-align: right;
+    padding: 5px;
+    font-family: monospace;
+    font-size: larger;
+}
+
+.calc_aba{
+    width: 20px;
+    height: 50px;
+    background-color: rgba(54, 107, 5, 0.596);
+    border-radius: 0px 8px 8px 0px;
+    cursor: pointer;
+}
+
+/*Teclas*/
+ 
+.div_teclas{
+    width: 220px;
+    flex-wrap: wrap;
+}
+
+.tecla{
+    background-color: #aaa;
+    border: 3px solid #888;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px; 
+    margin: 2px;
+}
+
+.tecla:hover{
+    background-color: #888;
+    cursor: pointer;
+}
+
+.teclaOp{
+    background-color: #f44;
+    border-color: #800 !important;
+}
