@@ -17,6 +17,16 @@ let contato = {
 
         destinoDOM.innerHTML = ""
         contatos.forEach((c) => {
+            const btn_trash = document.createElement('img')
+            btn_trash.setAttribute('src', './trash.png')
+            btn_trash.addEventListener('click', (evt) => {
+                const divToRemove = evt.target.closest('.contato');
+                if (divToRemove) {
+                    divToRemove.remove();
+                    contatos.splice(index, 1);
+                }
+            })
+
             const div = document.createElement("div")
             div.setAttribute("class", "contato")
             const p_nome = document.createElement("p")
@@ -28,6 +38,7 @@ let contato = {
             div.appendChild(p_nome)
             div.appendChild(p_telefone)
             div.appendChild(p_email)
+            div.appendChild(btn_trash)
             destinoDOM.appendChild(div)
         })
     }
