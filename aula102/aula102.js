@@ -17,14 +17,14 @@ console.log(nome.lastIndexOf('o'))
 
 console.log(nome.localeCompare(nome2))
 
-console.log(nome.replace("o", "u"))
+console.log(nome.replace('o', 'u'))
 
-console.log(nome.search("Pinho"))
+console.log(nome.search('Pinho'))
 
 let sobrenome = nome.slice(6, 11)
 console.log(sobrenome)
 
-let arr_nome = nome.split(" ")
+let arr_nome = nome.split(' ')
 console.log(arr_nome)
 
 //localeCompare() faz uma comparação entre duas Strings, se for verdadeiro retorna 0, senão retorna 1 ou -1 (primeira menor que a segunda)
