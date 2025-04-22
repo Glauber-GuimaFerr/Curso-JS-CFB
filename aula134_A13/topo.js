@@ -1,16 +1,19 @@
-const head = document.head
 const body = document.body
 
-const estilo = '<link rel="stylesheet" href="topo.css">'
-head.innerHTML += estilo 
+const estilotopo = 'display: flex;' +
+'justify-content: space-between;' +
+'align-items: center;' +
+'background-color: #00f;' 
 
 const topo = document.createElement('div')
 topo.setAttribute('id', 'topo')
-topo.setAttribute('class', 'topo')
+topo.setAttribute('style', estilotopo)
 body.prepend(topo)
 
+const estilo_img_logo = 'width: 200px;'
+
 const logo = '<div id="logo" class="logo">' +
-'<img src="./img/logo.png" title="CFB Cursos">' +
+"<img src='./img/logo.png' title='CFB Cursos' style='" + estilo_img_logo + "'>" +
 '</div>'
 topo.innerHTML += logo
 
