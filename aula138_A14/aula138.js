@@ -1,7 +1,7 @@
 import {Cxmsg} from './cxmsg.js'
 
 const config = {
-    cor: '#48f'
+    cor: "#48f"
 }
 Cxmsg.config(config)
 
