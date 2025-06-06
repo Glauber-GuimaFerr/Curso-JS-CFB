@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../shared/estoque_geral.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Estoque - BackOffice</title>
+    <style>
+        .cxmsg_fundo{
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.75);
+        }
+
+        .titulo_cxmsg{
+
+        }
+
+        .corpo_cxmsg{
+
+        }
+
+        .rodape_cxmsg{
+
+        }
+
+        .btn_fechar_cxmsg{
+
+        }
+
+        .btn_cxmsg{
+
+        }
+    </style>
+</head>
+<body>
+    <div id="cxmsg_fundo" class="cxmsg_fundo">
+        <div id="cxmsg" class="cxmsg">
+            <div id="titulo_cxmsg" class="titulo_cxmsg">
+                <p>Título</p>
+                <div>
+                    <img id="btn_fechar" class="btn_fechar_cxmsg" src="../shared/img/fechar.svg">
+                </div>
+            </div>
+            <div id="corpo_cxmsg" class="corpo_cxmsg">
+                <p>Mensagem</p>
+            </div>
+            <div id="rodape_cxmsg" class="rodape_cxmsg">
+                <button id="btn_ok_cxmsg" class="btn_cxmsg">ok</button>
+                <button id="btn_sim_cxmsg" class="btn_cxmsg">sim</button>
+                <button id="btn_nao_cxmsg" class="btn_cxmsg">não</button>
+            </div>
+        </div>
+    </div>
+    <div id="menuPrincipal" class="menuPrincipal ocultar">
+        <div class="menuItens">
+            <a href="./colaboradores/colaboradores.html" target="fprincipal" class="btn_menuItem">Colaboradores</a>
+            <a href="#" class="btn_menuItem">CFB Cursos</a>
+            <a href="#" class="btn_menuItem">CFB Cursos</a>
+            <a href="#" class="btn_menuItem">CFB Cursos</a>
+            <a href="#" class="btn_menuItem">CFB Cursos</a>
+        </div>
+        <div>
+            <img src="../shared/img/menu.svg" id="btn_menuPrincipal" class="btn_menuPrincipal" alt="Botão do menu">    
+        </div>
+    </div>
+    <div id="topo" class="topo">
+        <div></div>
+        <div id="logo" class="logo">
+            <img src="../shared/img/logo.png"  style="width: 20%;" alt="Logo">
+        </div>
+        <div id="config" class="config">
+            <div>
+                <div>id</div>
+                <div>nome</div>
+            </div>
+            <div>
+                <img src="../shared/img/config.svg" id="btn_config" class="btn_config" alt="Botão de configuração">
+            </div>
+        </div>
+    </div>
+    <div id="principal" class="principal">
+        <iframe name="fprincipal" class="fprincipal"></iframe>
+    </div>
+    <script src="../shared/estoque_geral.js" type="module"></script>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
