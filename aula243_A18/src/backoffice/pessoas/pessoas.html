@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/estoque_geral.css">
+    <link rel="stylesheet" href="pessoas.css">
+    <title>Pessoas - BackOffice</title>
+</head>
+<body>
+    <div id="topoJanela" class="topoJanela">
+        <div></div>
+        <div>Pessoas</div>
+        <div>
+            <img src="../../shared/img/lupa.svg" id="btn_pesq" class="btn_mainoper" title="Pesquisar pessoa" alt="Botão de lupa">
+            <img src="../../shared/img/listarTudo.svg" id="btn_listarTudo" class="btn_mainoper" title="Mostrar tabela completa" alt="Botão de listar todos os elementos">
+            <img src="../../shared/img/add.svg" id="btn_add" class="btn_mainoper" title="Adicionar nova pessoa" alt="Botão adicionar">
+        </div>
+    </div>
+    <div id="filtragem" class="filtragem">
+        <div class="campoForm campoFiltragem">
+            <label>Filtrar por nome</label>
+            <input type="text" id="f_filtragem" name="f_filtragem" class="inputFiltragem">
+        </div>
+    </div>
+    <div id="pesquisa" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopupPesquisar">Pesquisar Pessoa</div>
+                <img src="../../shared/img/fechar.svg" id="btn_fecharPopupPesq" class="btn_janelaopera" alt="Botão fechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Tipo da pesquisa</label>
+                    <div class="campoRadio">
+                        <input type="radio" id="f_pesqId" name="f_pesqTipo" checked>ID
+                    </div>
+                    <div class="campoRadio">
+                        <input type="radio" id="f_pesqNome" name="f_pesqTipo">Nome
+                    </div>
+                </div>
+                <div class="campoForm">
+                    <input type="text" id="f_pesq" name="f_pesq">
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_pesquisar" class="btn_comandoPopup">pesquisar</button>
+            </div>
+        </div>
+    </div>
+    <div id="novaPessoa" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Nova Pessoa</div>
+                <img src="../../shared/img/fechar.svg" id="btn_fecharPopup" class="btn_janelaopera" alt="Botão fechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Nome da Pessoa</label>
+                    <input type="text" id="f_nome" name="f_nome">
+                </div>
+                <div class="campoForm">
+                    <label>Tipo</label>
+                    <select id="f_tipoPessoa" name="f_tipoPessoa"></select>
+                </div>
+                <div class="campoForm">
+                    <label>Status</label>
+                    <select id="f_status" name="f_status">
+                        <option value="A">Ativo</option>
+                        <option value="I">Inativo</option>
+                    </select>
+                </div>
+                <div class="campoForm">
+                    <label>Foto</label>
+                    <input type="file" accept="image/png, image/jpeg, image/jpg" id="f_foto" name="f_foto">
+                </div>
+                <div class="campoForm2">
+                    <img src="#" id="img_foto" class="img_foto">
+                </div>
+                <div class="campoForm">
+                    <label>Telefones</label>
+                    <input type="text" id="f_fone" name="f_fone">
+                    <div id="telefones" class="telefones"></div>
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_gravarPopup" class="btn_comandoPopup">gravar</button>
+                <button id="btn_cancelarPopup" class="btn_comandoPopup">cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="areaGrid" class="areaGrid">
+        <div id="grid" class="grid">
+            <div id="tituloGrid" class="tituloGrid">
+                <div class="colunaTituloGrid c1">ID</div>
+                <div class="colunaTituloGrid c2">Nome</div>
+                <div class="colunaTituloGrid c3">Tipo</div>
+                <div class="colunaTituloGrid c4">Status</div>
+                <div class="colunaTituloGrid c5">Operações</div>
+            </div>
+            <div id="dadosGrid" class="dadosGrid"></div>
+        </div>
+    </div>
+    <script src="pessoas.js" type="module"></script>    
+</body>
+</html>
