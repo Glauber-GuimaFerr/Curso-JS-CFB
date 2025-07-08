@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/estoque_geral.css">
+    <link rel="stylesheet" href="produtos.css">
+    <title>Produtos - BackOffice</title>
+</head>
+<body>
+    <div id="topoJanela" class="topoJanela">
+        <div></div>
+        <div>Produtos</div>
+        <div>
+            <img src="../../shared/img/lupa.svg" id="btn_pesq" class="btn_mainoper" title="Pesquisar produto" alt="Botão de lupa">
+            <img src="../../shared/img/listarTudo.svg" id="btn_listarTudo" class="btn_mainoper" title="Mostrar tabela completa" alt="Botão de listar todos os elementos">
+            <img src="../../shared/img/add.svg" id="btn_add" class="btn_mainoper" title="Cadastrar produto" alt="Botão adicionar">
+        </div>
+    </div>
+    <div id="filtragem" class="filtragem">
+        <div class="campoForm campoFiltragem">
+            <label>Filtrar por produto</label>
+            <input type="text" id="f_filtragem" name="f_filtragem" class="inputFiltragem">
+        </div>
+    </div>
+    <div id="pesquisa" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopupPesquisar">Pesquisar Produto</div>
+                <img src="../../shared/img/fechar.svg" id="btn_fecharPopupPesq" class="btn_janelaopera" alt="Botão fechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Tipo da pesquisa</label>
+                    <div class="campoRadio">
+                        <input type="radio" id="f_pesqId" name="f_pesqTipo" checked>ID
+                    </div>
+                    <div class="campoRadio">
+                        <input type="radio" id="f_pesqNome" name="f_pesqTipo">Nome
+                    </div>
+                </div>
+                <div class="campoForm">
+                    <input type="text" id="f_pesq" name="f_pesq">
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_pesquisar" class="btn_comandoPopup">pesquisar</button>
+            </div>
+        </div>
+    </div>
+    <div id="novoProduto" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Novo Produto</div>
+                <img src="../../shared/img/fechar.svg" id="btn_fecharPopup" class="btn_janelaopera" alt="Botão fechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Código do Produto</label>
+                    <input type="text" id="f_codprod" name="f_codprod">
+                </div>
+                <div class="campoForm">
+                    <label>Descrição do Produto</label>
+                    <input type="text" id="f_descprod" name="f_descprod">
+                </div>
+                <div class="campoForm">
+                    <label>Quantidade</label>
+                    <input type="number" min="0" id="f_qtdeprod" name="f_qtdeprod">
+                </div>
+                <div class="campoForm">
+                    <label>Tipo</label>
+                    <select id="f_tipoprod" name="f_tipoprod"></select>
+                </div>
+                <div class="campoForm">
+                    <label>Fornecedor</label>
+                    <select id="f_fornprod" name="f_fornprod"></select>
+                </div>
+                <div class="campoForm">
+                    <label>Status</label>
+                    <select id="f_statusprod" name="f_statusprod">
+                        <option value="A">Ativo</option>
+                        <option value="I">Inativo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_gravarPopup" class="btn_comandoPopup">gravar</button>
+                <button id="btn_cancelarPopup" class="btn_comandoPopup">cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="movEstoque" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Movimentação de Estoque</div>
+                <img src="../../shared/img/fechar.svg" id="btn_fecharPopup" class="btn_janelaopera" alt="Botão fechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>Nome do Produto</label>
+                    <input type="text" id="f_nome" name="f_nome">
+                </div>
+                <div class="campoForm">
+                    <label>Tipo</label>
+                    <select id="f_tipoPessoa" name="f_tipoPessoa"></select>
+                </div>
+                <div class="campoForm">
+                    <label>Status</label>
+                    <select id="f_status" name="f_status">
+                        <option value="A">Ativo</option>
+                        <option value="I">Inativo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_gravarPopup" class="btn_comandoPopup">registrar movimentação</button>
+                <button id="btn_cancelarPopup" class="btn_comandoPopup">cancelar</button>
+            </div>
+        </div>
+    </div>
+    <div id="areaGrid" class="areaGrid">
+        <div id="grid" class="grid">
+            <div id="tituloGrid" class="tituloGrid">
+                <div class="colunaTituloGrid c1">ID</div>
+                <div class="colunaTituloGrid c2">Nome</div>
+                <div class="colunaTituloGrid c3">Quantidade</div>
+                <div class="colunaTituloGrid c4">Status</div>
+                <div class="colunaTituloGrid c5">Operações</div>
+            </div>
+            <div id="dadosGrid" class="dadosGrid"></div>
+        </div>
+    </div>
+    <script src="produtos.js" type="module"></script>    
+</body>
+</html>
