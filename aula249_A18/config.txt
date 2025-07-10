@@ -1,0 +1,4 @@
+{
+    "servidor_node":"http://localhost:3000",
+    "versao":"1.0"
+}
