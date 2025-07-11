@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../shared/estoque_geral.css">
+    <link rel="stylesheet" href="./index.css">
+    <title>Login - BackOffice</title>
+</head>
+<body>
+    <div id="primeiroAcesso" class="popup ocultarPopup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Sign</div>
+                <img src="../../shared/img/fechar.svg" id="btn_fecharPopupDefSenha" class="btn_janelaopera" alt="Botão fechar">
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>E-Mail:</label>
+                    <input type="email" name="f_emaildefsenha" id="f_emaildefsenha">
+                </div>
+                <div class="campoForm">
+                    <label>Senha:</label>
+                    <input type="password" name="f_senha1" id="f_senha1">
+                </div>
+                <div class="campoForm">
+                    <label>Repita a Senha:</label>
+                    <input type="password" name="f_senha2" id="f_senha2">
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_gravarSenha" class="btn_comandoPopup">Cadastrar</button>
+            </div>    
+        </div>
+    </div>
+    <div id="login" class="popup">
+        <div class="janelaPopup">
+            <div class="tituloPopup">
+                <div id="tituloPopup">Login</div>
+            </div>
+            <div class="corpoPopup">
+                <div class="campoForm">
+                    <label>E-Mail:</label>
+                    <input type="email" name="f_email" id="f_email">
+                </div>
+                <div class="campoForm">
+                    <label>Senha:</label>
+                    <input type="password" name="f_senha" id="f_senha">
+                </div>
+            </div>
+            <div class="rodapePopup">
+                <button id="btn_login" class="btn_comandoPopup">Entrar</button>
+            </div>    
+        </div>
+    </div>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
