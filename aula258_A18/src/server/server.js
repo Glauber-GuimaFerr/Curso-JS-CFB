@@ -609,7 +609,7 @@ app.post('/entradatoken', (req, res) => {
     const tokenId = results1.insertId;
     const query2 = `SELECT s_desc_token FROM token WHERE n_token_token = ?`;
 
-    connection.query(query2, tokenId, (error, results2) => {
+    connection.query(query2, [tokenId], (error, results2) => {
       if(error){
         console.error('Erro ao executar a query:', error);
         return res.status(500).send('Erro no servidor');
